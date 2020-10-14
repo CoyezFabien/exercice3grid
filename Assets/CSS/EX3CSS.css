@@ -1,0 +1,52 @@
+
+#boxMain
+{
+    display: grid;
+    grid-template-areas: "header header header header header header"
+                         "menu main main main right right"
+                         "menu footer footer footer footer footer";
+    grid-gap: 2px;
+    background-color: red;
+    height: 200px;  
+}
+.header
+{
+    grid-area: header;
+    background-color: sandybrown;
+}
+.menu
+{
+    grid-area: menu;
+    background-color: sandybrown;
+}
+.right
+{
+    grid-area: right;
+    background-color: sandybrown;
+}
+.footer
+{
+    grid-area: footer;
+    background-color: sandybrown;
+}
+.main
+{
+    grid-area: main;
+    background-color: sandybrown;
+}
+
+@media screen and (max-width:640px) {
+    #boxMain {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "header"
+        "menu"
+        "main"
+        "right"
+        "footer";
+    }
+}
+
+
